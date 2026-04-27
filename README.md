@@ -18,8 +18,6 @@ O **Népelim Café** é um cardápio responsivo que permite ao usuário:
 ---
 
 ## 🚀 Linguagens Utilizadas
-
-<p align="left">
 <img 
     align="left" 
     alt="HTML"
@@ -45,9 +43,6 @@ O **Népelim Café** é um cardápio responsivo que permite ao usuário:
     style="padding-right: 10px;" 
     src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" 
 />
-
-
-</p>
 
 ---
 
