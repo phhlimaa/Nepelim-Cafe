@@ -44,8 +44,6 @@ O **Népelim Café** é um cardápio responsivo que permite ao usuário:
     src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" 
 />
 
----
-
 ## 🎯 Funcionalidades
 
 * 📂 Separação por categorias:
