@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nepelim Café | Menu</title>
+
+
+<style>
+:root{
+  --verde:#1e3932;
+  --cinza:#f6f6f6;
+  --preto:#000;
+  --vermelho:#c40000;
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family:Segoe UI, Arial, sans-serif;
+  background:#fff;
+  color:#1e3932;
+}
+
+/* HEADER */
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 20px;
+  border-bottom:1px solid #ddd;
+}
+
+header h1{font-size:22px;margin:0}
+
+.menu-btn{
+  display:none;
+  font-size:26px;
+  cursor:pointer;
+}
+
+/* LAYOUT */
+.container{
+  display:flex;
+  min-height:calc(100vh - 70px);
+}
+
+/* SIDEBAR */
+.sidebar{
+  width:260px;
+  padding:25px 20px;
+  border-right:1px solid #eee;
+  transition:transform 0.4s ease;
+}
+
+.sidebar button{
+  display:block;
+  width:100%;
+  background:none;
+  border:none;
+  text-align:left;
+  padding:10px 5px;
+  font-size:15px;
+  cursor:pointer;
+  color:#1e3932;
+}
+
+.sidebar button:hover{
+  color:#00754a;
+}
+
+/* CONTEÚDO */
+.content{
+  flex:1;
+  padding:30px;
+}
+
+.section{
+  display:none;
+  animation:fade 0.4s ease;
+}
+
+.section.active{
+  display:block;
+}
+
+@keyframes fade{
+  from{opacity:0; transform:translateY(10px)}
+  to{opacity:1; transform:translateY(0)}
+}
+
+.section h2{
+  border-bottom:1px solid #ddd;
+  padding-bottom:10px;
+  margin-top:0;
+}
+
+/* CARDS */
+.card-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+  gap:25px;
+}
+
+.card{
+  text-align:center;
+  cursor:pointer;
+}
+
+.card img{
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  object-fit:cover;
+  box-shadow:0 4px 10px rgba(0,0,0,0.15);
+}
+
+.card p{
+  margin:6px 0 2px;
+}
+
+.price{
+  font-weight:bold;
+}
+
+/* OPÇÕES */
+.opcoes{
+  max-height:0;
+  overflow:hidden;
+  opacity:0;
+  transition:0.4s;
+  background:var(--cinza);
+  border-radius:10px;
+  margin-top:10px;
+  padding:0 10px;
+  font-size:14px;
+}
+
+.card.open .opcoes{
+  max-height:300px;
+  opacity:1;
+  padding:10px;
+}
+
+/* FOOTER */
+.footer{
+  background:#000;
+  color:#fff;
+  padding:50px 20px 20px;
+  text-align:center;
+}
+
+.footer-title{
+  color:var(--vermelho);
+  letter-spacing:2px;
+}
+
+.footer-links{
+  margin:20px 0;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:25px;
+}
+
+.footer-links a{
+  color:#fff;
+  text-decoration:none;
+}
+
+.footer-links a:hover{
+  color:var(--vermelho);
+}
+
+.footer-bottom{
+  margin-top:20px;
+  font-size:12px;
+  border-top:1px solid var(--vermelho);
+  padding-top:10px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .menu-btn{display:block}
+  .sidebar{
+    position:fixed;
+    top:70px;
+    left:0;
+    height:100%;
+    background:#fff;
+    transform:translateX(-100%);
+    z-index:1000;
+  }
+  .sidebar.open{
+    transform:translateX(0);
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Népelim Café</h1>
+  <span class="menu-btn" onclick="toggleMenu()">☰</span>
+</header>
+
+<div class="container">
+
+<aside class="sidebar" id="sidebar">
+  <button onclick="showSection('salgados')">Salgados</button>
+  <button onclick="showSection('lanches')">Lanches</button>
+  <button onclick="showSection('quentes')">Bebidas Quentes</button>
+  <button onclick="showSection('geladas')">Bebidas Geladas</button>
+</aside>
+
+<main class="content">
+
+<!-- SALGADOS -->
+<section class="section active" id="salgados">
+<h2>Salgados</h2>
+<div class="card-grid">
+
+<div class="card"><img src="pao de queijo.jpg"><p>Pão de Queijo</p><p class="price">R$ 6,00</p></div>
+
+<div class="card" onclick="toggleOpcoes(this)">
+<img src="quiche.png">
+<p>Quiche</p><p class="price">R$ 12,00</p>
+<div class="opcoes"><p>Três Queijos</p><p>Ricota com Espinafre</p><p>Lorraine</p></div>
+</div>
+
+
+<div class="card" onclick="toggleOpcoes(this)">
+<img src="empada.png">
+<p>Empadas</p><p class="price">R$ 9,90</p>
+<div class="opcoes"><p>Frango com Catupiry</p><p>Palmito</p></div>
+</div>
+
+<div class="card" onclick="toggleOpcoes(this)">
+<img src="pao de batata.png">
+<p>Pão de Batata</p><p class="price">R$ 12,00</p>
+<div class="opcoes"><p>Requeijão</p><p>Frango com Requeijão</p></div>
+</div>
+
+<div class="card"><img src="enroladinho.jfif"><p>Enroladinho</p><p class="price">R$ 9,90</p></div>
+<div class="card"><img src="kibe.jpg"><p>Kibe</p><p class="price">R$ 9,90</p></div>
+
+<div class="card" onclick="toggleOpcoes(this)">
+<img src="coxinha.png">
+<p>Coxinha</p><p class="price">R$ 9,90</p>
+<div class="opcoes"><p></p><p>Frango com Requeijão</p></div>
+</div>
+
+<div class="card" onclick="toggleOpcoes(this)">
+<img src="esfiha.png">
+<p>Esfiha</p><p class="price">R$ 9,90</p>
+<div class="opcoes"><p>Carne</p><p>Calabresa</p></div>
+</div>
+
+
+</div>
+</section>
+
+<!-- LANCHES -->
+<section class="section" id="lanches">
+<h2>Lanches</h2>
+<div class="card-grid">
+
+<div class="card" onclick="toggleOpcoes(this)">
+<img src="lanche natural.jfif">
+<p>Lanche Natural</p><p class="price">R$ 14,90</p>
+<div class="opcoes"><p>Filé Frango</p><p>Atum</p><p>Peito de Peru</p><p>Três Queijos</p><p>Salpicão de Frango</p><p>Salame com Provolone</p></div>
+</div>
+
+<div class="card" onclick="toggleOpcoes(this)">
+<img src="misto quente.png">
+<p>Misto Quente</p><p class="price">R$ 16,90</p>
+<div class="opcoes"><p>Queijo Quente</p></div>
+</div>
+
+</div>
+</section>
+
+<!-- BEBIDAS QUENTES -->
+<section class="section" id="quentes">
+<h2>Bebidas Quentes</h2>
+<div class="card-grid">
+
+<div class="card"><img src="café expresso.png"><p>Expresso</p><p class="price">R$ 7,00</p></div>
+
+<div class="card" onclick="toggleOpcoes(this)">
+<img src="cappucino.jpg">
+<p>Capuccino</p>
+<div class="opcoes"><p>Médio — R$ 10,00</p><p>Grande — R$ 12,00</p></div>
+</div>
+
+<div class="card" onclick="toggleOpcoes(this)">
+<img src="chocolate quente.jpg">
+<p>Chocolate</p>
+<div class="opcoes"><p>Médio — R$ 10,00</p><p>Grande — R$ 12,00</p></div>
+</div>
+
+<div class="card" onclick="toggleOpcoes(this)">
+<img src="café expresso.png">
+<p>Café com Leite</p>
+<div class="opcoes"><p>Médio — R$ 10,00</p><p>Grande — R$ 12,00</p></div>
+</div>
+
+<div class="card" onclick="toggleOpcoes(this)">
+<img src="cha quente.png">
+<p>Chá</p>
+<div class="opcoes"><p>Simples — R$ 9,00</p><p>Misto — R$ 10,90</p></div>
+</div>
+
+</div>
+</section>
+
+<!-- BEBIDAS GELADAS -->
+<section class="section" id="geladas">
+<h2>Bebidas Geladas</h2>
+<div class="card-grid">
+
+<div class="card" onclick="toggleOpcoes(this)">
+<img src="suco natural.jpg">
+<p>Suco Natural</p>
+<div class="opcoes">
+<p>Natural Laranja — R$ 12,00</p>
+<p>Polpa Morango — R$ 12,00</p>
+<p>Polpa Abacaxi com Hortelã — R$ 12,00</p>
+<p>Polpa Maracujá — R$ 12,00</p>
+<p>Com Leite — R$ 16,90</p>
+</div>
+</div>
+
+<div class="card"><img src="maguary.jpg"><p>Suco Maguary</p><p class="price">R$ 5,50</p></div>
+
+<div class="card" onclick="toggleOpcoes(this)">
+<img src="vitamina.jpg">
+<p>Vitaminas</p>
+<div class="opcoes"><p>Banana — R$ 14,90</p><p>Abacate — R$ 14,90</p><p>Mamão — R$ 14,90</p><p>Mista — R$ 16,90</p></div>
+</div>
+
+<div class="card"><img src="ovomaltine.jpg"><p>Ovomaltine</p><p class="price">R$ 14,90</p></div>
+
+
+<div class="card"><img src="refrigerante 350 ml.jpg"><p>Refrigerante 350ml</p><p class="price">R$ 7,00</p></div>
+<div class="card"><img src="lata 220.jpg"><p>Refrigerante 220ml</p><p class="price">R$ 5,50</p></div>
+<div class="card"><img src="red bull.png"><p>Energético</p><p class="price">R$ 13,90</p></div>
+
+<div class="card" onclick="toggleOpcoes(this)">
+<img src="agua natural.jpg">
+<p>Água</p>
+<div class="opcoes"><p>Natural — R$ 4,00</p><p>Com Gás — R$ 5,50</p></div>
+</div>
+
+</div>
+</section>
+
+</main>
+</div>
+
+<footer class="footer">
+  <p class="footer-title">NEPELIM CAFÉ</p>
+  <div class="footer-links">
+    <p>Whatsapp:11 91314 - 6226</p>
+  </div>
+  <div class="footer-bottom">
+    © 2026 Nepelim Café — Todos os direitos reservados
+  </div>
+</footer>
+
+<script>
+function toggleOpcoes(card){
+  card.classList.toggle('open');
+}
+function showSection(id){
+  document.querySelectorAll('.section').forEach(sec=>sec.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  document.getElementById('sidebar').classList.remove('open');
+}
+function toggleMenu(){
+  document.getElementById('sidebar').classList.toggle('open');
+}
+</script>
+
+</body>
+</html>
