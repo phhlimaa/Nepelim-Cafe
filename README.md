@@ -1,52 +1,53 @@
 # ☕ Népelim Café — Cardápio Digital
 
-Este projeto consiste em um **cardápio digital interativo** desenvolvido utilizando **HTML, CSS e JavaScript**, com o objetivo de praticar e aprimorar habilidades em desenvolvimento front-end.
+![Status](https://img.shields.io/badge/status-online-brightgreen)
+![HTML](https://img.shields.io/badge/HTML5-structure-orange)
+![CSS](https://img.shields.io/badge/CSS3-style-blue)
+![JavaScript](https://img.shields.io/badge/JavaScript-interactivity-yellow)
+![Responsivo](https://img.shields.io/badge/responsive-yes-green)
 
-O sistema simula a experiência de um cardápio moderno, organizado por categorias e com interação dinâmica para visualização de opções.
+🔗 **Acesse o projeto online:**
+👉 https://phhlimaa.github.io/Nepelim-Cafe/
 
 ---
 
 ## 📌 Sobre o Projeto
 
-O **Népelim Café** é um cardápio responsivo que permite ao usuário:
+Este projeto consiste em um **cardápio digital interativo** desenvolvido utilizando **HTML, CSS e JavaScript**, com foco em **desenvolvimento front-end moderno** e boas práticas.
 
-* Navegar entre categorias de produtos
-* Visualizar itens organizados em formato de cards
-* Expandir opções de produtos com diferentes variações
-* Utilizar menu lateral adaptável para dispositivos móveis
+O sistema simula a experiência de um cardápio real, com navegação por categorias, interações dinâmicas e layout responsivo.
 
 ---
 
 ## 🚀 Linguagens Utilizadas
-<img 
-    align="left" 
-    alt="HTML"
-    title="HTML 5" 
-    width="30px" 
-    style="padding-right: 10px;" 
-    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" 
-/>
-<img 
-    align="left" 
-    alt="CSS" 
-    title="CSS 3"
-    width="30px" 
-    style="padding-right: 10px;" 
-    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" 
-/>
 
 <img 
-    align="left" 
-    alt="JS" 
-    title="JS"
-    width="30px" 
-    style="padding-right: 10px;" 
-    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" 
+ align="left" 
+ alt="HTML"
+ title="HTML 5" 
+ width="30px" 
+ style="padding-right: 10px;" 
+ src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" 
+/> <img 
+ align="left" 
+ alt="CSS" 
+ title="CSS 3"
+ width="30px" 
+ style="padding-right: 10px;" 
+ src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" 
+/> <img 
+ align="left" 
+ alt="JS" 
+ title="JavaScript"
+ width="30px" 
+ style="padding-right: 10px;" 
+ src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" 
 />
 
-
+<br><br>
 
 ---
+
 ## 🎯 Funcionalidades
 
 * 📂 Separação por categorias:
@@ -56,32 +57,41 @@ O **Népelim Café** é um cardápio responsivo que permite ao usuário:
   * Bebidas Quentes
   * Bebidas Geladas
 
-* 📱 Layout responsivo
+* 📱 Design responsivo (Mobile First)
 
 * 🎛️ Menu lateral interativo
 
-* 🔽 Expansão de opções ao clicar nos produtos
+* 🔽 Expansão dinâmica de produtos
+
+* ⚡ Navegação rápida sem recarregamento
 
 * 🎨 Interface limpa e intuitiva
+
 ---
 
-## 💡 Aprendizados
-
-Durante o desenvolvimento deste projeto, foram aplicados conceitos como:
+## 💡 Conceitos Aplicados
 
 * Manipulação de DOM com JavaScript
-* Uso de **Flexbox** e **Grid**
-* Responsividade com **media queries**
-* Organização de código front-end
+* Layout moderno com **Flexbox e CSS Grid**
+* Responsividade com **Media Queries**
+* Estruturação semântica com **HTML5**
+* Organização de código e separação de responsabilidades
 
 ---
 
 ## 📈 Melhorias Futuras
 
-* Integração com backend
-* Sistema de pedidos/carrinho
+* Integração com backend (Node.js / API)
+* Sistema de pedidos online
+* Carrinho de compras
 * Banco de dados
-* Deploy online
+* Deploy com domínio próprio
+
+---
+
+## 🧠 Palavras-chave
+
+`Front-End Developer` • `HTML5` • `CSS3` • `JavaScript` • `Responsive Design` • `Mobile First` • `UI/UX` • `Web Development` • `DOM Manipulation` • `Flexbox` • `CSS Grid` • `Interactive Menu` • `Digital Menu`
 
 ---
 
@@ -95,7 +105,8 @@ Durante o desenvolvimento deste projeto, foram aplicados conceitos como:
 
 ## 📄 Licença
 
-Projeto com fins educacionais.
+Projeto desenvolvido para fins educacionais e portfólio.
 
 ---
 
+⭐ Se gostou do projeto, deixe uma estrela no repositório!
